@@ -480,7 +480,7 @@
     </main>
 {/block}
 {block name='script'}
-    <script src="/theme/material/js/shake.js/shake.js"></script>
+    <script src="/theme/{$theme}/js/shake.js/shake.js"></script>
     <script>
 
         $(function () {

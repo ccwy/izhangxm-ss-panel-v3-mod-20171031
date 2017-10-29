@@ -1,11 +1,6 @@
 
-
-
-
-
-{include file='header.tpl'}
-
-
+{extends file='base.tpl'}
+{block name='main'}
 	<main class="content">
 		<div class="content-header ui-content-header">
 			<div class="container">
@@ -55,5 +50,4 @@
 		</div>
 	</main>
 
-
-{include file='footer.tpl'}
+{/block}

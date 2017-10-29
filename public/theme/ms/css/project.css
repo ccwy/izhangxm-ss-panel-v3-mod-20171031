@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic);
 body {
-  padding-bottom: 69px;
+  padding-bottom: 10px;
 }
 
 .ui-content-header {
@@ -265,11 +265,9 @@ body {
 }
 
 .menu-scroll{
-  top:70px;
-  height:auto;
-  left:15px;
   border-radius:5px;
   box-shadow: none;
+  width:240px;
 
 }
 .card{

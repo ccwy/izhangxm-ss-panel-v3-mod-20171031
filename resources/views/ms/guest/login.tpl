@@ -1,4 +1,4 @@
-{extends file='base.tpl'}
+{extends file='guest/base.tpl'}
 {block name='main'}
     <main class="content">
         <div class="container">
@@ -6,7 +6,7 @@
                 <div class="col-lg-4 col-lg-push-4 col-sm-6 col-sm-push-3">
                     <section class="content-inner">
 
-                        <nav class="tab-nav margin-top-no">
+                        <nav class="tab-nav">
                             <ul class="nav nav-justified">
                                 <li class="active">
                                     <a class="waves-attach" data-toggle="tab" href="#passwd_login">密码登录</a>
@@ -36,7 +36,7 @@
                                                     <p class="text-center">
 														<span class="avatar avatar-inline avatar-lg">
 															<img alt="Login"
-                                                                 src="/theme/material/images/users/avatar-001.jpg">
+                                                                 src="/theme/{$theme}/images/users/avatar-001.jpg">
 														</span>
                                                     </p>
 

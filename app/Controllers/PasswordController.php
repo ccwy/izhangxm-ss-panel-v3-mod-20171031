@@ -17,7 +17,7 @@ class PasswordController extends BaseController
 {
     public function reset()
     {
-        return $this->view()->display('password/reset.tpl');
+        return $this->view()->display('guest/reset.tpl');
     }
 
     public function handleReset($request, $response, $args)

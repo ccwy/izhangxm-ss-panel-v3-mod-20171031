@@ -52,8 +52,6 @@
 
         </div>
     </main>
-{/block}{block name='script'}
-
 {/block}
 
 

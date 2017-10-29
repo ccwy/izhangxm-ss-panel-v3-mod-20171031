@@ -10,8 +10,8 @@
 
 
     <!-- css -->
-    <link href="/theme/material/css/base.min.css" rel="stylesheet">
-    <link href="/theme/material/css/project.min.css" rel="stylesheet">
+    <link href="/theme/{$theme}/css/base.min.css" rel="stylesheet">
+    <link href="/theme/{$theme}/css/project.min.css" rel="stylesheet">
 
 
     <!-- favicon -->
@@ -177,7 +177,7 @@
         }
 
         .page-green .ui-content-header {
-            background-image: url(/theme/material/css/images/bg/green.jpg);
+            background-image: url(/theme/{$theme}/css/images/bg/green.jpg);
         }
 
         .content-header-green, .page-green .content-header {
@@ -201,8 +201,8 @@
 <script src="//cdn.staticfile.org/jquery-validate/1.15.0/jquery.validate.min.js"></script>
 <script src="//static.geetest.com/static/tools/gt.js"></script>
 
-<script src="/theme/material/js/base.min.js"></script>
-<script src="/theme/material/js/project.min.js"></script>
+<script src="/theme/{$theme}/js/base.min.js"></script>
+<script src="/theme/{$theme}/js/project.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.16/clipboard.min.js"></script>
 {block name='script'}{/block}
 </body>

@@ -1,4 +1,4 @@
-{extends file='base.tpl'}
+{extends file='guest/base.tpl'}
 {block name='main'}
     <main class="content">
         <div class="container">
@@ -15,7 +15,7 @@
                                 <div class="card-inner">
                                     <p class="text-center">
 										<span class="avatar avatar-inline avatar-lg">
-											<img alt="Login" src="/theme/material/images/users/avatar-001.jpg">
+											<img alt="Login" src="/theme/{$theme}/images/users/avatar-001.jpg">
 										</span>
                                     </p>
 

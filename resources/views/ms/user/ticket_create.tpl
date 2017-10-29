@@ -27,7 +27,7 @@
                             <div class="card-inner">
                                 <div class="form-group form-group-label">
                                     <label class="floating-label" for="content">内容</label>
-                                    <link rel="stylesheet" href="/theme/material/editor/css/editormd.min.css"/>
+                                    <link rel="stylesheet" href="/theme/{$theme}/editor/css/editormd.min.css"/>
                                     <div id="editormd">
                                         <textarea style="display:none;" id="content"></textarea>
                                     </div>
@@ -65,7 +65,7 @@
         </div>
     </main>
 {/block}{block name='script'}
-    <script src="/theme/material/editor/editormd.min.js"></script>
+    <script src="/theme/{$theme}/editor/editormd.min.js"></script>
     <script>
         $(document).ready(function () {
             function submit() {
@@ -104,7 +104,7 @@
 
         $(function () {
             editor = editormd("editormd", {
-                path: "/theme/material/editor/lib/", // Autoload modules mode, codemirror, marked... dependents libs path
+                path: "/theme/{$theme}/editor/lib/", // Autoload modules mode, codemirror, marked... dependents libs path
                 height: 720,
                 saveHTMLToTextarea: true
             });

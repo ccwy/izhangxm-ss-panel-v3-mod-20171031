@@ -1,5 +1,5 @@
 {extends file='user/base.tpl'}{block name='main'}
-    <script src="//cdn.staticfile.org/canvasjs/1.7.0/canvasjs.js"></script>
+    <script src="/extra/cdn.staticfile.org/canvasjs/1.7.0/canvasjs.js"></script>
     <script src="//cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
     <main class="content">
         <div class="content-header ui-content-header">

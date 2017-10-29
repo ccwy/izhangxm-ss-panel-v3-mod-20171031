@@ -1,4 +1,4 @@
-{extends file='base.tpl'}
+{extends file='guest/base.tpl'}
 {block name='main'}
     <main class="content">
         <div class="container">
@@ -15,7 +15,7 @@
                                 <div class="card-inner">
                                     <p class="text-center">
 										<span class="avatar avatar-inline avatar-lg">
-											<img alt="Login" src="/theme/material/images/users/avatar-001.jpg">
+											<img alt="Login" src="/theme/{$theme}/images/users/avatar-001.jpg">
 										</span>
                                     </p>
 
@@ -23,8 +23,17 @@
                                     <div class="form-group form-group-label">
                                         <div class="row">
                                             <div class="col-md-10 col-md-push-1">
-                                                <label class="floating-label" for="email">邮箱</label>
-                                                <input class="form-control" id="email" type="text">
+                                                <label class="floating-label" for="password">密码</label>
+                                                <input class="form-control" id="password" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group form-group-label">
+                                        <div class="row">
+                                            <div class="col-md-10 col-md-push-1">
+                                                <label class="floating-label" for="repasswd">重复密码</label>
+                                                <input class="form-control" id="repasswd" type="text">
                                             </div>
                                         </div>
                                     </div>
@@ -64,35 +73,37 @@
     <script>
         $(document).ready(function () {
             function reset() {
-                $("#result").modal();
-                $("#msg").html("正在发送，请稍候。。。");
                 $.ajax({
                     type: "POST",
-                    url: "/password/reset",
+                    url: "/password/token/{$token}",
                     dataType: "json",
                     data: {
-                        email: $("#email").val(),
+                        password: $("#password").val(),
+                        repasswd: $("#repasswd").val(),
                     },
                     success: function (data) {
-                        if (data.ret == 1) {
+                        if (data.ret) {
                             $("#result").modal();
                             $("#msg").html(data.msg);
-                            // window.setTimeout("location.href='/auth/login'", 2000);
+                            window.setTimeout("location.href='/auth/login'", {$config['jump_delay']});
                         } else {
                             $("#result").modal();
                             $("#msg").html(data.msg);
                         }
                     },
                     error: function (jqXHR) {
-                        $("#result").modal();
-                        $("#msg").html(data.msg);
+                        $("#msg-error").hide(10);
+                        $("#msg-error").show(100);
+                        $("#msg-error-p").html("发生错误：" + jqXHR.status);
+                        // 在控制台输出错误信息
+                        console.log(removeHTMLTag(jqXHR.responseText));
                     }
                 });
             }
 
             $("html").keydown(function (event) {
                 if (event.keyCode == 13) {
-                    login();
+                    reset();
                 }
             });
             $("#reset").click(function () {
@@ -101,3 +112,5 @@
         })
     </script>
 {/block}
+
+
