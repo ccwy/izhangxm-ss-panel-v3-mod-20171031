@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Services\Auth;
 use App\Services\View;
 
+
+
 /**
  * BaseController
  */
@@ -27,6 +29,7 @@ class BaseController
 
     public function view()
     {
+
         return $this->smarty();
     }
 
