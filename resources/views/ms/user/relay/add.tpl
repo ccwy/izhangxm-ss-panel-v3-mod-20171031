@@ -152,3 +152,4 @@
 </script>
 
 {/literal}
+{/block}
