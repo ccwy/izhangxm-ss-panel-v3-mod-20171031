@@ -9,7 +9,7 @@
                             <div class="card-main">
                                 <div class="card-header">
                                     <div class="card-inner">
-                                        <h1 class="card-heading">和我签订契约，成为魔法少女吧。</h1>
+                                        <h1 class="card-heading">注册，立即为科研加油</h1>
                                     </div>
                                 </div>
                                 <div class="card-inner">
@@ -128,20 +128,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div class="col-md-10 col-md-push-1">
-                                                <p>注册即代表同意<a href="/tos">服务条款</a>，以及保证所录入信息的真实性，如有不实信息会导致账号被删除。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
                         <div class="clearfix">
-                            <p class="margin-no-top pull-left"><a class="btn btn-flat btn-brand waves-attach"
-                                                                  href="/auth/login">已经注册？请登录</a></p>
+                            <p class="margin-no-top pull-left">
+                                <a class="btn btn-flat btn-brand waves-attach" href="/auth/login">已经注册？请登录</a>
+                            </p>
                         </div>
 
 
@@ -161,10 +154,10 @@
                                     <div class="modal-footer">
                                         <p class="text-right">
                                             <button class="btn btn-flat btn-brand-accent waves-attach waves-effect"
-                                                    data-dismiss="modal" type="button" id="cancel">我不服
+                                                    data-dismiss="modal" type="button" id="cancel">不同意
                                             </button>
                                             <button class="btn btn-flat btn-brand-accent waves-attach waves-effect"
-                                                    data-dismiss="modal" id="reg" type="button">资慈
+                                                    data-dismiss="modal" id="reg" type="button">同意
                                             </button>
                                         </p>
 

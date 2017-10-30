@@ -7,12 +7,13 @@
     <meta name="theme-color" content="#3f51b5">
     <title>{$config["appName"]}</title>
 
-    <!-- css -->
-    <link href="/theme/{$theme}/css/base.css" rel="stylesheet">
-    <link href="/theme/{$theme}/css/project.css" rel="stylesheet">
+
     {*<link href="/extra/fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">*}
     <link href="/extra/cdn.staticfile.org/material-design-lite/1.1.0/material.min.css" rel="stylesheet">
     <link href="/extra/cdn.staticfile.org/datatables/1.10.13/css/dataTables.material.min.css" rel="stylesheet">
+    <!-- css -->
+    <link href="/theme/{$theme}/css/base.css" rel="stylesheet">
+    <link href="/theme/{$theme}/css/project.css" rel="stylesheet">
     <!-- favicon -->
     <!-- ... -->
     <style>
@@ -207,7 +208,32 @@
             position: fixed;
             width: 100%;
             top: 0;
+            height: 48px;
 
+        }
+        @media only screen and (min-width: 992px){
+            #menu_id,.logo_contaniner{
+                display: none;
+            }
+            #logo_id{
+                font-weight:bold;
+                font-size:26px;
+            }
+
+        }
+        @media only screen and (max-width: 992px) {
+            #logo_id{
+                display: none;
+            }
+            .logo_contaniner p{
+                color: #fff;
+                font-size:22px;
+                position: fixed;
+                top:0;
+                width: 100%;
+                text-align: center;
+                line-height: 100%;
+            }
         }
 
     </style>
@@ -217,15 +243,29 @@
 </head>
 <body class="page-orange">
 {if $user->isLogin}
+
+
 <header class="header header-orange header-transparent ui-header">
     <ul class="nav nav-list pull-left">
-        <div>
-            <a data-toggle="menu" href="#ui_menu">
+        <div id="menu_id">
+            <a data-toggle="menu" href="#ui_menu" >
                 <span class="icon icon-lg text-white">menu</span>
             </a>
         </div>
     </ul>
+    <ul class="nav nav-list pull-left">
+        <div id="logo_id">
+            <a>
+                <span class="text-white">{$config['appName']}</span>
+            </a>
 
+        </div>
+    </ul>
+    <div class="logo_contaniner">
+        <p id="logo2">
+            {$config['appName']}
+        </p>
+    </div>
     <ul class="nav nav-list pull-right">
         <div class="dropdown margin-right">
             <a class="dropdown-toggle padding-left-no padding-right-no" data-toggle="dropdown">
@@ -237,7 +277,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-right">
                 <li>
-                    <a class="padding-right-lg waves-attach" href="/user/"><span class="icon icon-lg margin-right">account_box</span>用户中心</a>
+                    <a class="padding-right-lg waves-attach" href="/user"><span class="icon icon-lg margin-right">account_box</span>用户中心</a>
                 </li>
                 <li>
                     <a class="padding-right-lg waves-attach" href="/user/logout"><span

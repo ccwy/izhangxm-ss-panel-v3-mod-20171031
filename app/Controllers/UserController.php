@@ -85,8 +85,6 @@ class UserController extends BaseController
                 ->assign("user", $this->user)->registerClass("URL", "App\Utils\URL")->assign('baseUrl', Config::get('baseUrl'))->display('user/index.tpl');
     }
 
-
-
     public function lookingglass($request, $response, $args)
     {
         $Speedtest=Speedtest::where("datetime", ">", time()-Config::get('Speedtest_duration')*3600)->orderBy('datetime', 'desc')->get();
