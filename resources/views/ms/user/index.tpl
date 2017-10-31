@@ -9,7 +9,6 @@
         </div>
         <div class="container">
             <section class="content-inner margin-top-no">
-                <div class="ui-card-wrap">
 
                     <div class="col-lg-12 col-md-12">
 
@@ -35,11 +34,11 @@
                                     <nav class="tab-nav margin-top-no">
                                         <ul class="nav nav-list">
                                             <li {if $ssr_prefer}class="active"{/if}>
-                                                <a class="waves-attach" data-toggle="tab" href="#all_ssr"><i
+                                                <a class="" data-toggle="tab" href="#all_ssr"><i
                                                             class="icon icon-lg">airplanemode_active</i>&nbsp;ShadowsocksR</a>
                                             </li>
                                             <li {if !$ssr_prefer}class="active"{/if}>
-                                                <a class="waves-attach" data-toggle="tab" href="#all_ss"><i
+                                                <a class="" data-toggle="tab" href="#all_ss"><i
                                                             class="icon icon-lg">flight_takeoff</i>&nbsp;Shadowsocks</a>
                                             </li>
                                         </ul>
@@ -471,7 +470,6 @@
 
                     {include file='dialog.tpl'}
 
-                </div>
 
 
         </div>
